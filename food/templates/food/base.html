@@ -27,6 +27,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'logout' %}">LogOut</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                </li>
               {% else %}
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'login' %}">Login</a>
@@ -42,7 +45,10 @@
             </div>
           {% endfor %}
         {% endif %}
-      {% block body %}
-      {% endblock %}
+      {% if user.is_authenticated %}
+          {% block body %}
+          {% endblock %}
+      {% endif %}
+
 </body>
 </html>
