@@ -48,6 +48,9 @@
       {% if user.is_authenticated %}
           {% block body %}
           {% endblock %}
+      {% else %}
+          {% block register %}
+          {% endblock %}
       {% endif %}
 
 </body>
