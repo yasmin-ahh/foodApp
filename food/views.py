@@ -4,8 +4,17 @@ from django.http import HttpResponse
 from .forms import ItemForm
 from .models import Item
 from django.template import loader
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
+class IndexClassView(ListView):
+    model = Item
+    template_name = 'food/index.html'
+    context_object_name = 'item_list'
 
+class FoodDetail(DetailView):
+    model = Item
+    template_name = 'food/details.html'
 # Create your views here.
 def index(request):
     item_lst = Item.objects.all()
@@ -13,14 +22,14 @@ def index(request):
     context = {
         'item_lst' : item_lst
     }
-
     return HttpResponse(template.render(context, request))
+
 
 def item(request):
     return HttpResponse('This is a food app')
 
 def detail(request, id):
-    item_gg = Item.objects.get(id=id)
+    item_gg = Item.objects.get(pk=id)
     #template = loader.get_template('food/details.html')
     context = {
         'item_gg' : item_gg

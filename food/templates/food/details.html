@@ -13,18 +13,18 @@
     <div>
             <div class="row" style="display: flex; justify-content: center; position: relative;" >
                 <div class="col-md-7">
-                    <img src="{{ item_gg.item_img }}" class="card"/>
+                    <img src="{{ object.item_img }}" class="card"/>
                 </div>
                 <div class="col-md-7">
                     <ol>
-                        <h1>{{ item_gg.item_name}}</h1>
-                        <h2>{{ item_gg.item_desc}}</h2>
-                        <h3>${{ item_gg.item_price}}</h3>
+                        <h1>{{ object.item_name}}</h1>
+                        <h2>{{ object.item_desc}}</h2>
+                        <h3>${{ object.item_price}}</h3>
                      </ol>
                 </div>
 
             </div>
-            <a href="{% url 'food:delete_item' item_gg.id %}" class="btn btn-danger"><span>Delete item</span></a>
+            <a href="{% url 'food:delete_item' object.id %}" class="btn btn-danger"><span>Delete item</span></a>
     </div>
     {% endblock %}
 </body>

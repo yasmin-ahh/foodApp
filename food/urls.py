@@ -9,9 +9,9 @@ worry about muliple apps having same name for paths
 '''
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.IndexClassView.as_view(), name='index'),
     path('item/', views.item, name='item'),
-    path('<int:id>/',views.detail, name='detail'),
+    path('<int:pk>/',views.FoodDetail.as_view(), name='detail'),
     path('add/',views.create_item, name='create_item'),
     #edit item
     path('update/<int:id>', views.update_item, name='update_item'),
