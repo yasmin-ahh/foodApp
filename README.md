@@ -11,4 +11,4 @@ This includes:
 
 Tech Stacks: Python, Django, HTML, CSS, JS
 
-<img width="1457" alt="image" src="https://github.com/yasmin-ahh/foodApp/assets/78480767/96f7f52c-17ac-4301-afb4-ec74385a6640">
+<img width="1457" alt="image" src="https://github.com/yasmin-ahh/foodApp/assets/78480767/f4f2ec06-8187-4d87-8537-8a268a0081f2">
